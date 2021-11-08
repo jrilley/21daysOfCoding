@@ -241,16 +241,78 @@
 //         return this;
 //     },
 //     showStep() {
-//         console.log(ladder.step);
+//         console.log(this.step);
+//         return this;
 //     }
 // }
 
 // ladder.up().up().up().down().showStep();
 
-function BigUser() {
-    this.name = "Joshua";
+// function BigUser() {
+//     this.name = "Joshua";
 
-    return;
+//     return;
+// }
+
+// console.log(new BigUser().name);
+
+// function User(name) {
+//     this.name = name;
+
+//     this.sayHi = function() {
+//         console.log(`Hello, my name is ${this.name}`);
+//     }
+// }
+
+// new User("Anton").sayHi();
+
+// let obj = {};
+
+// function A() {
+//     return obj;
+// }
+
+// function B() {
+//     return obj;
+// }
+
+// let a = new A;
+// let b = new B;
+
+// console.log(a == b); // true
+
+// function Calculator() {
+//     this.read = function() {
+//         this.a = +prompt("a: ", 0);
+//         this.b = +prompt("b: ", 0);
+//     }
+
+//     this.sum = function() {
+//         return this.a + this.b;
+//     }
+
+//     this.mul = function() {
+//         return this.a * this.b;
+//     }
+// }
+
+// let calculator = new Calculator;
+// calculator.read();
+
+// alert(calculator.sum());
+// alert(calculator.mul());
+
+function Accumulator(startingValue) {
+    this.value = startingValue;
+
+    this.read = function() {
+        this.value += +prompt("How much to add?", 0);
+    }
 }
 
-console.log(new BigUser().name);
+let accum = new Accumulator(0);
+
+accum.read();
+accum.read();
+
+alert(accum.value);
