@@ -302,17 +302,105 @@
 // alert(calculator.sum());
 // alert(calculator.mul());
 
-function Accumulator(startingValue) {
-    this.value = startingValue;
+// function Accumulator(startingValue) {
+//     this.value = startingValue;
 
-    this.read = function() {
-        this.value += +prompt("How much to add?", 0);
-    }
-}
+//     this.read = function() {
+//         this.value += +prompt("How much to add?", 0);
+//     }
+// }
 
-let accum = new Accumulator(0);
+// let accum = new Accumulator(0);
 
-accum.read();
-accum.read();
+// accum.read();
+// accum.read();
 
-alert(accum.value);
+// alert(accum.value);
+
+// let user = null;
+
+// console.log(user?.address?.street);
+
+// function User(name) {
+//     this.name = name;
+//     this?.address;
+
+// }
+
+// let user = new User("Anton");
+
+// // user.address = "Holovna"
+
+// console.log(user.address ? user.address : "nope");
+
+// let id = Symbol("id");
+
+// console.log(id.toString());
+// console.log(id.description);
+
+// let user = {
+//     name: "Anton",
+//     [id]: 1    
+// }
+
+// let clone = {}
+
+// Object.assign(clone, user);
+
+// console.log(clone[id]);
+
+// let some = Symbol.for("some")
+
+// console.log(some.description);
+
+// let user = {
+//     name: "Anton",
+//     money: 1000,
+
+//     [Symbol.toPrimitive](hint) {
+//         console.log(`hint: ${hint}`);
+//         return hint == "string" ? `{name: "${this.name}"}` : this.money;
+//     }
+// };
+
+// console.log(+user);
+
+// const SYM = Symbol();
+
+// const o = {
+//     a: 1,
+//     b: 2,
+//     c: 3,
+//     [SYM]: 4
+// };
+
+// for (let key in o) {
+//     if (!o.hasOwnProperty(key)) continue;
+//     console.log(`${key}: ${o[key]}`);
+// }
+
+// const user = {
+//     name: "Anton",
+//     money: 1000,
+
+//     toString() {
+//         return `name: "${this.name}"`;
+//     },
+
+//     valueOf() {
+//         return this.money;
+//     }
+// };
+
+// alert(user);
+// console.log(+user);
+// console.log(+user + 500);
+
+// let str = "Hello1";
+
+// str.test = 5;
+// console.log(str.test);
+
+// const num = 255;
+
+// console.log(num.toString(6));
